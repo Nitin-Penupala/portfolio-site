@@ -87,11 +87,10 @@ export default function About() {
                                 <img src="/PP_grey.png" alt="Nitin Penupala" className={styles.photo} />
                             </div>
                         </div>
-                        <div className={styles.decoration} />
                         <div className={styles.stats}>
                             {stats.map((stat) => (
                                 <div key={stat.label} className={styles.statCard}>
-                                    <div className={styles.statNumber} data-value={stat.number}>0</div>
+                                    <div className={styles.statNumber}>{stat.number}</div>
                                     <div className={styles.statLabel}>{stat.label}</div>
                                 </div>
                             ))}
