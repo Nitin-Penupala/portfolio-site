@@ -84,7 +84,7 @@ export default function About() {
                     <div className={`${styles.imageWrapper} reveal`}>
                         <div className={styles.imageCard}>
                             <div className={styles.avatar}>
-                                <span className={styles.initials}>NP</span>
+                                <img src="/PP_grey.png" alt="Nitin Penupala" className={styles.photo} />
                             </div>
                         </div>
                         <div className={styles.decoration} />
