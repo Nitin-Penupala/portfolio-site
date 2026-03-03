@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { Brain, ScanLine, Github, ExternalLink } from 'lucide-react';
+import { Brain, ScanLine, Github } from 'lucide-react';
 import styles from './Projects.module.css';
 
 const projects = [
@@ -70,9 +70,6 @@ export default function Projects() {
                                 <div className={styles.links}>
                                     <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                                         <Github size={20} />
-                                    </a>
-                                    <a href="#" aria-label="External link">
-                                        <ExternalLink size={20} />
                                     </a>
                                 </div>
                             </div>
