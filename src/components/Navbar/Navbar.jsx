@@ -43,6 +43,12 @@ export default function Navbar() {
         document.body.style.overflow = '';
     };
 
+    const scrollTo = (e, id) => {
+        e.preventDefault();
+        closeMenu();
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     const toggleMenu = () => {
         setMenuOpen((prev) => {
             document.body.style.overflow = !prev ? 'hidden' : '';
@@ -53,7 +59,7 @@ export default function Navbar() {
     return (
         <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
             <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <a href="#" className={styles.logo}>
+                <a href="#" className={styles.logo} onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
                     NP<span>.</span>
                 </a>
 
@@ -63,12 +69,12 @@ export default function Navbar() {
                             key={item.href}
                             href={item.href}
                             className={activeSection === item.href.slice(1) ? styles.active : ''}
-                            onClick={closeMenu}
+                            onClick={(e) => scrollTo(e, item.href.slice(1))}
                         >
                             {item.label}
                         </a>
                     ))}
-                    <a href="#contact" className={styles.cta} onClick={closeMenu}>
+                    <a href="#contact" className={styles.cta} onClick={(e) => scrollTo(e, 'contact')}>
                         Contact
                     </a>
                 </div>
