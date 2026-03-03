@@ -176,6 +176,14 @@ img {
   transform: translateY(-3px);
 }
 
+@media (max-width: 480px) {
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+    gap: 6px;
+  }
+}
+
 
 .reveal {
   opacity: 0;

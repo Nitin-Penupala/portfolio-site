@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FolderOpen, Send, Github, Linkedin, Mail, Phone } from 'lucide-react';
+import { FolderOpen, Send, Github, Linkedin, Mail } from 'lucide-react';
 import DottedGlowBackground from '../ui/DottedGlowBackground';
 import styles from './Hero.module.css';
 
@@ -86,7 +86,6 @@ export default function Hero() {
                         <a href="https://github.com/Nitin-Penupala" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Github size={20} /></a>
                         <a href="https://linkedin.com/in/nitin-penupala" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={20} /></a>
                         <a href="mailto:penupalanitin07@gmail.com" aria-label="Email"><Mail size={20} /></a>
-                        <a href="tel:+918074856499" aria-label="Phone"><Phone size={20} /></a>
                     </div>
                 </div>
             </div>

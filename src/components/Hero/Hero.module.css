@@ -122,8 +122,22 @@
 }
 
 @media (max-width: 768px) {
+    .hero {
+        padding: 100px 0 60px;
+    }
+
     .name {
         font-size: clamp(2.2rem, 8vw, 3.5rem);
+    }
+
+    .description {
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+    }
+
+    .buttons {
+        margin-bottom: 24px;
+        gap: 10px;
     }
 
     .scrollIndicator {
@@ -132,8 +146,28 @@
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding: 90px 0 40px;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
     .buttons {
-        flex-direction: column;
+        flex-direction: row;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .socials {
+        gap: 12px;
+    }
+
+    .socials a {
+        width: 38px;
+        height: 38px;
     }
 }
 
