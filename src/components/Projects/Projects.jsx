@@ -17,7 +17,7 @@ const projects = [
             'Automated data pipelines with REST API integration',
         ],
         tags: ['Python', 'Flask', 'REST APIs', 'AI/ML', 'MongoDB'],
-        github: 'https://github.com/Nitin-Penupala',
+        github: 'https://github.com/Nitin-Penupala/ai-civic',
     },
     {
         icon: <ScanLine size={24} />,
@@ -31,7 +31,7 @@ const projects = [
             'Automated CSV/Excel export for analytics and reporting',
         ],
         tags: ['Python', 'SQLite', 'CustomTkinter', 'RFID', 'CSV/Excel'],
-        github: 'https://github.com/Nitin-Penupala',
+        github: 'https://github.com/Nitin-Penupala/SENTINEL',
     },
 ];
 
