@@ -1,0 +1,136 @@
+.projects {
+    padding: var(--section-padding);
+    position: relative;
+    z-index: 1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 28px;
+}
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--accent-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+.card:hover {
+    border-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.06);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--accent-primary);
+}
+
+.links {
+    display: flex;
+    gap: 10px;
+}
+
+.links a {
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+    padding: 4px;
+    display: flex;
+}
+
+.links a:hover {
+    color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.description {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.features li {
+    position: relative;
+    padding-left: 20px;
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.features li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+}
+
+.features {
+    margin-bottom: 24px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--accent-primary);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

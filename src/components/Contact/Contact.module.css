@@ -1,0 +1,135 @@
+.contact {
+    padding: var(--section-padding);
+    position: relative;
+    z-index: 1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.info p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.methods {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.method {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-md);
+    transition: all 0.4s ease;
+}
+
+.method:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(6px);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.06);
+}
+
+.methodIcon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--accent-primary);
+    flex-shrink: 0;
+}
+
+.methodLabel {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.methodValue {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.formCard {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    backdrop-filter: blur(10px);
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.formGroup label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    font-size: 0.92rem;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+}
+
+.formGroup textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.submitBtn {
+    width: 100%;
+    justify-content: center;
+}
+
+.sent {
+    background: linear-gradient(135deg, #666666, #888888) !important;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
