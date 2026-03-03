@@ -36,40 +36,8 @@ export default function About() {
         const els = sectionRef.current?.querySelectorAll('.reveal');
         els?.forEach((el) => observer.observe(el));
 
-        const statEls = sectionRef.current?.querySelectorAll(`.${styles.statNumber}`);
-        const counterObserver = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const el = entry.target;
-                        const text = el.dataset.value;
-                        const match = text.match(/(\d+)/);
-                        if (match) {
-                            const target = parseInt(match[0]);
-                            const suffix = text.replace(match[0], '');
-                            let current = 0;
-                            const increment = Math.ceil(target / 30);
-                            const interval = setInterval(() => {
-                                current += increment;
-                                if (current >= target) {
-                                    current = target;
-                                    clearInterval(interval);
-                                }
-                                el.textContent = current + suffix;
-                            }, 33);
-                        }
-                        counterObserver.unobserve(el);
-                    }
-                });
-            },
-            { threshold: 0.5 }
-        );
-
-        statEls?.forEach((el) => counterObserver.observe(el));
-
         return () => {
             observer.disconnect();
-            counterObserver.disconnect();
         };
     }, []);
 
